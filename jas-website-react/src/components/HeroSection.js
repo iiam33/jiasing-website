@@ -1,47 +1,51 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import AnimatedLogo from "./AnimatedLogo";
-// import {
-//   Link,
-//   Button,
-//   Element,
-//   Events,
-//   animateScroll,
-//   scrollSpy,
-//   scroller,
-// } from "react-scroll";
+import { useSpring, animated } from "react-spring";
 
-// import ReactCSSTransitionGroup from 'react-transition-group';
+import AnimatedLogo from "./AnimatedLogo";
 
 import "./HeroSection.css";
 
 function HeroSection() {
-  const [scrollUp, setScrollUp] = useState(false);
+  const [scrollDown, setScrollDown] = useState(false);
+
+  const styles = useSpring({
+    from: { y: 0, maxWidth: "20vw" },
+    to: { y: scrollDown ? -150 : 0, maxWidth: scrollDown ? "13vw" : "20vw" },
+  });
 
   useEffect(() => {
     const handleScroll = (event) => {
-      if (event.deltaY < 0) {
-        setScrollUp(true);
+      if (event.deltaY > 0) {
+        setScrollDown(true);
       } else {
-        setScrollUp(false);
+        setScrollDown(false);
       }
     };
 
-    console.log(scrollUp);
+    console.log(scrollDown);
     window.addEventListener("wheel", handleScroll);
 
     return () => {
       window.removeEventListener("wheel", handleScroll);
     };
-  }, [scrollUp]);
+  }, [scrollDown]);
 
   return (
     <>
-      <div className="hero-container" name="hero-section">
+      <div className="hero-container">
         <div className="center">
-          <div className="logo">
-            <AnimatedLogo />
-          </div>
+          <animated.div
+            style={{
+              marginLeft: "auto",
+              marginRight: "auto",
+              ...styles,
+            }}
+          >
+            <div className="logo">
+              <AnimatedLogo />
+            </div>
+          </animated.div>
         </div>
       </div>
     </>

@@ -13,50 +13,50 @@ import {
   // scroller,
 } from "react-scroll";
 
-import {
-  Animator,
-  ScrollContainer,
-  ScrollPage,
-  // batch,
-  // Fade,
-  // FadeIn,
-  // FadeOut,
-  // Move,
-  // MoveIn,
-  // MoveOut,
-  // Sticky,
-  // StickyIn,
-  // StickyOut,
-  // Zoom,
-  // ZoomIn,
-  // ZoomOut,
-} from "react-scroll-motion";
+// import {
+//   Animator,
+//   ScrollContainer,
+//   ScrollPage,
+//   batch,
+//   Fade,
+//   FadeIn,
+//   FadeOut,
+//   Move,
+//   MoveIn,
+//   MoveOut,
+//   Sticky,
+//   StickyIn,
+//   StickyOut,
+//   Zoom,
+//   ZoomIn,
+//   ZoomOut,
+// } from "react-scroll-motion";
 
 function Home() {
   return (
     <>
       <Navbar />
-      <Element name="hero-section" className="hero-section">
-      <ScrollContainer>
-        <ScrollPage>
-          <Animator>
-            {/* <Element name="hero-section" className="hero-section"> */}
-              <HeroSection />
-            {/* </Element> */}
+      <Element name="hero-section">
+        {/* <ScrollContainer>
+          <ScrollPage>
+            <Animator> */}
+        {/* <Element name="hero-section" className="hero-section"> */}
+        <HeroSection />
+        {/* </Element> */}
 
-            {/* <Element name="test1" className="element">
+        {/* <Element name="test1" className="element">
         test 1
       </Element> */}
-          </Animator>
-        </ScrollPage>
-      </ScrollContainer>
+        {/* </Animator>
+          </ScrollPage>
+        </ScrollContainer> */}
       </Element>
 
-      <ScrollContainer>
+      {/* <ScrollContainer>
         <ScrollPage>
           <Animator></Animator>
         </ScrollPage>
-      </ScrollContainer>
+      </ScrollContainer> */}
     </>
   );
 }
