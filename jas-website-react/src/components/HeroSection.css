@@ -1,6 +1,6 @@
 .hero-container {
     display: table;
-	position: absolute;
+	position: static;
     top: 0;
     left: 0;
     height: 100%;
@@ -12,6 +12,16 @@
 	vertical-align: middle;
 }
 
+.center-bottom {
+	display: table-cell;
+	vertical-align: bottom;
+}
+
 .logo {
+    height: auto;
+}
+
+.title {
+    width: 20vw;
     height: auto;
 }
