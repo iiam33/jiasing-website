@@ -1,0 +1,20 @@
+.pin-wrapper {
+    display: inline-flex;
+    padding: 8px 2px;
+}
+
+.pin-container {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    width: 32vw;
+}
+
+.pin-container img {
+    display: flex;
+    width: 100%;
+    height: auto;
+    /* border-radius: 16px; */
+    object-fit: cover;
+}

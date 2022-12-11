@@ -1,4 +1,4 @@
-.hero-container {
+.hero-wrapper {
     display: table;
 	position: static;
     top: 0;
@@ -7,7 +7,7 @@
     width: 100%;
 }
   
-.center {
+.hero-container {
 	display: table-cell;
 	vertical-align: middle;
 }

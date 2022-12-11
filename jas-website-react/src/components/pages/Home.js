@@ -1,7 +1,10 @@
-import "../../App.css";
 import React from "react";
-import HeroSection from "../HeroSection";
+
 import Navbar from "../Navbar";
+import HeroSection from "../HeroSection";
+import PortfolioSection from "../PortfolioSection";
+
+import "../../App.css";
 
 import {
   // Link,
@@ -45,13 +48,13 @@ function Home() {
       </Element>
       {/* </ScrollPage> */}
 
-      <ScrollContainer>
-        <ScrollPage>
-          <Element name="test1" className="element">
-            test 1
+      {/* <ScrollContainer>
+        <ScrollPage> */}
+          <Element name="portfolio-section" className="portfolio-section">
+            <PortfolioSection />
           </Element>
-        </ScrollPage>
-      </ScrollContainer>
+        {/* </ScrollPage>
+      </ScrollContainer> */}
       {/* </Animator>
           </ScrollPage>
         </ScrollContainer> */}

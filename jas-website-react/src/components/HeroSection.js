@@ -85,8 +85,8 @@ function HeroSection() {
 
   return (
     <>
-      <div className="hero-container">
-        <div className="center">
+      <div className="hero-wrapper">
+        <div className="hero-container">
           <animated.div
             style={{
               marginLeft: "auto",
