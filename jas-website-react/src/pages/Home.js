@@ -48,6 +48,10 @@ function Home() {
       </Element>
       {/* </ScrollPage> */}
 
+      <Element name="about-section" className="portfolio-section">
+        <PortfolioSection />
+      </Element>
+
       {/* <ScrollContainer>
         <ScrollPage> */}
       <Element name="portfolio-section" className="portfolio-section">
@@ -60,11 +64,6 @@ function Home() {
         </ScrollContainer> */}
       {/* </Element> */}
 
-      {/* <ScrollContainer>
-        <ScrollPage>
-          <Animator></Animator>
-        </ScrollPage>
-      </ScrollContainer> */}
     </>
   );
 }
