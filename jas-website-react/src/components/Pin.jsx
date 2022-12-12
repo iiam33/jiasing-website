@@ -3,7 +3,6 @@ import React from "react";
 import "./css/Pin.css";
 
 function Pin({ urls, name }) {
-  // console.log(urls);
   return (
     <>
       <div className="pin-wrapper">

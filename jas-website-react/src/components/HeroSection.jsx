@@ -4,8 +4,8 @@ import { useSpring, animated } from "react-spring";
 
 import AnimatedLogo from "./AnimatedLogo";
 
-import name from "../assets/images/JiaSing_Namesvg.svg"
-import title from "../assets/images/JiaSing_ConceptArtistIllustratorsvg.svg"
+import name from "../assets/images/JiaSing_Namesvg.svg";
+import title from "../assets/images/JiaSing_ConceptArtistIllustratorsvg.svg";
 
 import "./css/HeroSection.css";
 
@@ -16,7 +16,7 @@ function Name({ scrollDown }) {
       opacity: scrollDown ? 1 : 0,
       y: scrollDown ? -140 : -30,
     },
-    delay: 100,
+    delay: scrollDown ? 100 : 0,
   });
 
   return (
@@ -40,7 +40,7 @@ function JobTitle({ scrollDown }) {
       opacity: scrollDown ? 1 : 0,
       y: scrollDown ? -50 : 0,
     },
-    delay: 250,
+    delay: scrollDown ? 250 : 0,
   });
 
   return (
@@ -52,11 +52,7 @@ function JobTitle({ scrollDown }) {
         ...titleStyles,
       }}
     >
-      <img
-        className="title"
-        src={title}
-        alt="Title"
-      />
+      <img className="title" src={title} alt="Title" />
     </animated.div>
   );
 }
@@ -73,10 +69,9 @@ function HeroSection() {
     const handleScroll = (event) => {
       if (event.deltaY > 0) {
         setScrollDown(true);
-      } 
-      // else {
-      //   setScrollDown(false);
-      // }
+      } else {
+        setScrollDown(false);
+      }
     };
 
     window.addEventListener("wheel", handleScroll);
