@@ -1,0 +1,44 @@
+@font-face {
+  font-family: MuseoSansCyrl;
+  src: url(../../assets/fonts/MuseoSansCyrl-900.ttf);
+}
+
+.about-wrapper {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-image: url(../../assets/images/portfolio/Portfolio15.jpg);
+    position: relative;
+}
+
+.about-left-container {
+  position: relative;
+  width: 40%;
+  height: 100%;
+  /* background-color: aqua; */
+  float: left;
+}
+
+.about-right-container {
+  position: relative;
+  width: 60%;
+  height: 100%;
+  background-color:blueviolet;
+  float: right;
+}
+
+.about-image {
+  position: absolute;
+  width: 25vw;
+  margin-left: auto; 
+  margin-right: auto; 
+  left: 55%; 
+  top: 18vh;
+  z-index: 1;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 25px;
+}

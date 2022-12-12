@@ -1,3 +1,8 @@
+@font-face {
+    font-family: MuseoSansCyrl;
+    src: url(../../assets/fonts/MuseoSansCyrl-900.ttf);
+}
+
 .portfolio-header {
     height: 30vh;
     display: flex;
@@ -9,10 +14,10 @@
 .portfolio-title {
     margin-left: auto;
     margin-right: auto;
-    font-family: sans-serif;
+    font-family: MuseoSansCyrl;
     font-size: 5vw;
-    font-style: italic;
-    font-weight: bolder;
+    color: #9D999D;
+    letter-spacing: 0.25vw;
 }
 
 .portfolio-title p {
@@ -23,7 +28,6 @@
     display: flex;
     width: 100%;
     height: 100%;
-    margin-top: 15px;
     justify-content: center;
 }
 
@@ -33,3 +37,4 @@
     margin: 0 auto;
     max-width: 100%;
 }
+
