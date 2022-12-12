@@ -1,9 +1,9 @@
 import React from "react";
 
-import "./Pin.css";
+import "./css/Pin.css";
 
 function Pin({ urls, name }) {
-  console.log(urls);
+  // console.log(urls);
   return (
     <>
       <div className="pin-wrapper">

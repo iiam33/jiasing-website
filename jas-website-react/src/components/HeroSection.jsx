@@ -4,7 +4,10 @@ import { useSpring, animated } from "react-spring";
 
 import AnimatedLogo from "./AnimatedLogo";
 
-import "./HeroSection.css";
+import name from "../assets/images/JiaSing_Namesvg.svg"
+import title from "../assets/images/JiaSing_ConceptArtistIllustratorsvg.svg"
+
+import "./css/HeroSection.css";
 
 function Name({ scrollDown }) {
   const nameStyles = useSpring({
@@ -25,7 +28,7 @@ function Name({ scrollDown }) {
         ...nameStyles,
       }}
     >
-      <img className="name" src="images/JiaSing_Namesvg.svg" alt="Name" />
+      <img className="name" src={name} alt="Name" />
     </animated.div>
   );
 }
@@ -50,8 +53,8 @@ function JobTitle({ scrollDown }) {
       }}
     >
       <img
-        className="title-1"
-        src="images/JiaSing_ConceptArtistIllustratorsvg.svg"
+        className="title"
+        src={title}
         alt="Title"
       />
     </animated.div>
