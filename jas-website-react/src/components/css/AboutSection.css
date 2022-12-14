@@ -3,6 +3,16 @@
   src: url(../../assets/fonts/MuseoSansCyrl-900.ttf);
 }
 
+@font-face {
+  font-family: BebasNeue;
+  src: url(../../assets/fonts/BebasNeue-Regular.otf);
+}
+
+@font-face {
+  font-family: MuseoSans;
+  src: url(../../assets/fonts/MuseoSans_500.otf);
+}
+
 .about-wrapper {
     width: 100%;
     height: 100%;
@@ -19,21 +29,13 @@
   float: left;
 }
 
-.about-right-container {
-  position: relative;
-  width: 60%;
-  height: 100%;
-  background-color:blueviolet;
-  float: right;
-}
-
 .about-image {
   position: absolute;
   width: 25vw;
   margin-left: auto; 
   margin-right: auto; 
   left: 55%; 
-  top: 18vh;
+  top: 17vh;
   z-index: 1;
 }
 
@@ -41,4 +43,48 @@
   width: 100%;
   height: auto;
   border-radius: 25px;
+}
+
+.about-right-container {
+  position: relative;
+  width: 60%;
+  height: 100%;
+  /* background-color:blueviolet; */
+  float: right;
+}
+
+.about-content {
+  position: absolute;
+  /* width: 30vw; */
+  margin-left: auto; 
+  margin-right: auto; 
+  left: 10%; 
+  top: 35vh;
+  z-index: 1;
+  /* background-color:green; */
+}
+
+.about-name {
+  font-family: BebasNeue;
+  font-size: 2vw;
+  color: #ffffff;
+  letter-spacing: 0.3vw;
+  margin-bottom: 6vh;
+}
+
+.about-title {
+  font-family: MuseoSansCyrl;
+  font-size: 3vw;
+  font-style: italic;
+  color: #fde86b;
+  letter-spacing: 0.1vw;
+  margin-bottom: 2vh;
+}
+
+.about-desc {
+  font-family: MuseoSans;
+  font-size: 0.9vw;
+  color: #fff;
+  width: 35vw;
+  line-height: 3vh;
 }

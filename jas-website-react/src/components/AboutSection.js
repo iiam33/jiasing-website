@@ -30,7 +30,7 @@ function FadeInMoveLeft({ isActive }) {
     from: { opacity: 0, x: 0 },
     to: { opacity: isActive ? 1 : 0, x: isActive ? -50 : 0 },
     delay: isActive ? 300 : 200,
-    config: { duration: isActive ? 900 : 600},
+    config: { duration: isActive ? 900 : 600 },
   });
 
   return (
@@ -47,6 +47,35 @@ function FadeInMoveLeft({ isActive }) {
   );
 }
 
+function FadeInMoveRight({ isActive }) {
+  const moveRightStyles = useSpring({
+    from: { opacity: 0, x: 0 },
+    to: { opacity: isActive ? 1 : 0, x: isActive ? 50 : 0 },
+    delay: isActive ? 300 : 200,
+    config: { duration: isActive ? 900 : 600 },
+  });
+
+  return (
+    <>
+      <animated.div
+        style={{
+          ...moveRightStyles,
+        }}
+      >
+        <div className="about-name">HENG JIA SING</div>
+        <div className="about-title">
+          <div className="title-1">An artist from</div>
+          <div className="title-2">Kuala Lumpur, Malaysia</div>
+        </div>
+        <div className="about-desc">
+          Jia SIng, also known as Jas, is an aspiring concept artist /
+          illustrator looking to bring joy and creativity to the world.
+        </div>
+      </animated.div>
+    </>
+  );
+}
+
 function About({ isActive }) {
   return (
     <>
@@ -56,7 +85,11 @@ function About({ isActive }) {
             <FadeInMoveLeft isActive={isActive} />
           </div>
         </div>
-        <div className="about-right-container"></div>
+        <div className="about-right-container">
+          <div className="about-content">
+            <FadeInMoveRight isActive={isActive} />
+          </div>
+        </div>
         <FadeInOpacity isActive={isActive} />
       </div>
     </>
