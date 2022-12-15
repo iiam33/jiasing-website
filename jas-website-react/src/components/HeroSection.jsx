@@ -9,7 +9,7 @@ import title from "../assets/images/JiaSing_ConceptArtistIllustratorsvg.svg";
 
 import "./css/HeroSection.css";
 
-function Name({ scrollDown }) {
+function FadeUpName({ scrollDown }) {
   const nameStyles = useSpring({
     from: { opacity: 0, y: -30 },
     to: {
@@ -33,7 +33,7 @@ function Name({ scrollDown }) {
   );
 }
 
-function JobTitle({ scrollDown }) {
+function FadeUpJobTitle({ scrollDown }) {
   const titleStyles = useSpring({
     from: { opacity: 0, y: 0 },
     to: {
@@ -96,8 +96,8 @@ function HeroSection() {
               <AnimatedLogo />
             </div>
           </animated.div>
-          <Name scrollDown={scrollDown} />
-          <JobTitle scrollDown={scrollDown} />
+          <FadeUpName scrollDown={scrollDown} />
+          <FadeUpJobTitle scrollDown={scrollDown} />
         </div>
       </div>
     </>

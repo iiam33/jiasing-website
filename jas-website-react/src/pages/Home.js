@@ -45,34 +45,34 @@ function Home() {
   const refPortfolio = useRef(null);
 
   const isInHeroSection = useIsInViewport(refHero);
-  // console.log("isInViewport1: ", isInHeroSection);
+  console.log("isInViewport1: ", isInHeroSection);
 
   const isInAboutSection = useIsInViewport(refAbout);
-  // console.log("isInViewport2: ", isInAboutSection);
+  console.log("isInViewport2: ", isInAboutSection);
 
   const isInPortfolioSection = useIsInViewport(refPortfolio);
-  // console.log("isInViewport3: ", isInPortfolioSection);
+  console.log("isInViewport3: ", isInPortfolioSection);
 
   return (
     <>
-      {/* <Navbar /> */}
-      <div ref={refHero}>
-        <Element name="hero-section" className="hero-section">
+      <Navbar />
+      <Element name="hero-section">
+        <div ref={refHero} className="hero-section">
           <HeroSection />
-        </Element>
-      </div>
+        </div>
+      </Element>
 
-      <div ref={refAbout}>
-        <Element name="about-section" className="about-section">
-          <AboutSection isActive={isInAboutSection && !isInHeroSection && !isInPortfolioSection} />
-        </Element>
-      </div>
+      <Element name="about-section">
+        <div ref={refAbout} className="about-section">
+          <AboutSection isActive={isInAboutSection} />
+        </div>
+      </Element>
 
-      <div ref={refPortfolio}>
-        <Element name="portfolio-section" className="portfolio-section">
-          <PortfolioSection />
-        </Element>
-      </div>
+      <Element name="portfolio-section">
+        <div ref={refPortfolio} className="portfolio-section">
+          <PortfolioSection isActive={isInPortfolioSection} />
+        </div>
+      </Element>
     </>
   );
 }
