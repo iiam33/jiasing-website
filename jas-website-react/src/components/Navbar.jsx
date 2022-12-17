@@ -23,6 +23,7 @@ function Navbar() {
             smooth={true}
             duration={500}
             offset={-10}
+            isDynamic={true}
           >
             Home
           </Link>
@@ -34,6 +35,7 @@ function Navbar() {
             spy={true}
             smooth={true}
             duration={500}
+            isDynamic={true}
           >
             About
           </Link>

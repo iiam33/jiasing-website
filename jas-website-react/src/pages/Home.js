@@ -1,21 +1,16 @@
 import React, { useEffect, useRef, useState, useMemo } from "react";
 
+import { Element } from "react-scroll";
+
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 import Navbar from "../components/Navbar";
 import HeroSection from "../components/HeroSection";
 import PortfolioSection from "../components/PortfolioSection";
 import AboutSection from "../components/AboutSection";
 
 import "../App.css";
-
-import {
-  // Link,
-  // Button,
-  Element,
-  // Events,
-  // animateScroll,
-  // scrollSpy,
-  // scroller,
-} from "react-scroll";
 
 function useIsInViewport(ref) {
   const [isIntersecting, setIsIntersecting] = useState(false);
@@ -43,15 +38,38 @@ function Home() {
   const refHero = useRef(null);
   const refAbout = useRef(null);
   const refPortfolio = useRef(null);
+  const [tween, setTween] = useState(null);
 
   const isInHeroSection = useIsInViewport(refHero);
-  console.log("isInViewport1: ", isInHeroSection);
 
   const isInAboutSection = useIsInViewport(refAbout);
-  console.log("isInViewport2: ", isInAboutSection);
 
   const isInPortfolioSection = useIsInViewport(refPortfolio);
-  console.log("isInViewport3: ", isInPortfolioSection);
+
+  useEffect(() => {
+    if (tween) return;
+
+    gsap.registerPlugin(ScrollTrigger);
+    let scrollTween = gsap.to(refHero.current, {
+      ease: "none",
+      scrollTrigger: {
+        trigger: refHero.current,
+        pin: true,
+        anticipatePin: 1,
+        invalidateOnRefresh: true,
+        refreshPriority: 1,
+        start: "top 0%",
+        end: "+=10%",
+        markers: false,
+        toggleActions: "play reset play reset",
+        // onUpdate: (self) => {
+        //   setProgress((self.progress * 100) | 0);
+        // }
+      }
+    });
+
+    setTween(scrollTween);
+  }, []);
 
   return (
     <>

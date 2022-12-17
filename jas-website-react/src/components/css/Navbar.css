@@ -10,7 +10,7 @@
     font-size: 1.2rem;
     position: absolute;
     top: 5vh;
-    z-index: 1;
+    z-index: 2;
     position: sticky;
 }
   
@@ -49,7 +49,7 @@
 .active {
     color: #000000;
     /* color: #ffffff; */
-    background-color: #f4df4d;
+    background-color: #ffea63;
     padding: 0.2vh 1vw;
     border-radius: 16px;
     margin: 0 1vw;
