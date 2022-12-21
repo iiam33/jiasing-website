@@ -41,6 +41,7 @@ function Home() {
   const [tween, setTween] = useState(null);
 
   const isInHeroSection = useIsInViewport(refHero);
+  console.log(isInHeroSection);
 
   const isInAboutSection = useIsInViewport(refAbout);
 
@@ -59,24 +60,24 @@ function Home() {
         invalidateOnRefresh: true,
         refreshPriority: 1,
         start: "top 0%",
-        end: "+=10%",
+        end: "+=30%",
         markers: false,
         toggleActions: "play reset play reset",
         // onUpdate: (self) => {
         //   setProgress((self.progress * 100) | 0);
         // }
-      }
+      },
     });
 
     setTween(scrollTween);
-  }, []);
+  }, [tween]);
 
   return (
     <>
       <Navbar />
       <Element name="hero-section">
         <div ref={refHero} className="hero-section">
-          <HeroSection />
+          <HeroSection isActive={isInHeroSection} />
         </div>
       </Element>
 

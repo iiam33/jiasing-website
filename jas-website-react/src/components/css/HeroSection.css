@@ -1,22 +1,49 @@
+@font-face {
+    font-family: MuseoSansCyrl;
+    src: url(../../assets/fonts/MuseoSansCyrl-900.ttf);
+}
+
 .hero-wrapper {
     display: table;
 	position: static;
     top: 0;
     left: 0;
-    height: 100%;
+    height: 100vh;
     width: 100%;
+    /* position: relative; */
 }
   
 .hero-container {
 	display: table-cell;
 	vertical-align: middle;
-}
-
-.center-bottom {
-	display: table-cell;
-	vertical-align: bottom;
+    /* position: relative;
+    padding: 22vh;
+    margin-bottom: auto; */
 }
 
 .logo {
     height: auto;
+}
+
+.hero-job-title {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.job-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: MuseoSansCyrl;
+    font-size: 4vw;
+    color: #9d999d;
+    letter-spacing: 0.2vw;
+}
+
+.star {
+    position: absolute;
+    z-index: -1;
+    /* right: 0; */
+    width: 100vw;
+    /* background-color: black; */
 }

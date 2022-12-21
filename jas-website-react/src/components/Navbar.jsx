@@ -22,7 +22,7 @@ function Navbar() {
             spy={true}
             smooth={true}
             duration={500}
-            offset={-10}
+            offset={-7}
             isDynamic={true}
           >
             Home
