@@ -11,10 +11,10 @@ import "./css/HeroSection.css";
 
 function FadeUpName({ scrollDown }) {
   const nameStyles = useSpring({
-    from: { opacity: 0, y: -30 },
+    from: { opacity: 0, y: 90 },
     to: {
       opacity: scrollDown ? 1 : 0,
-      y: scrollDown ? -10 : 50,
+      y: scrollDown ? 10 : 90,
     },
     delay: scrollDown ? 100 : 0,
   });
@@ -35,10 +35,10 @@ function FadeUpName({ scrollDown }) {
 
 function FadeUpJobTitle({ scrollDown }) {
   const titleStyles = useSpring({
-    from: { opacity: 0, y: 0 },
+    from: { opacity: 0, y: 90 },
     to: {
       opacity: scrollDown ? 1 : 0,
-      y: scrollDown ? 0 : 50,
+      y: scrollDown ? 40 : 90,
     },
     delay: scrollDown ? 250 : 0,
   });
@@ -66,8 +66,8 @@ function HeroSection({ isActive }) {
   const [scrollDown, setScrollDown] = useState(false);
 
   const translateStyles = useSpring({
-    from: { y: 120, maxWidth: "20vw" },
-    to: { y: scrollDown ? -10 : 120, maxWidth: scrollDown ? "10vw" : "20vw" },
+    from: { y: 160, maxWidth: "20vw" },
+    to: { y: scrollDown ? 30 : 160, maxWidth: scrollDown ? "10vw" : "20vw" },
   });
 
   // const shrinkStyles = useSpring({

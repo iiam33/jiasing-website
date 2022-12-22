@@ -327,16 +327,17 @@ function Blink({ isActive }) {
 
   const blinkStyles = useSpring({
     from: { opacity: 0 },
-    to: { opacity: 1 },
+    to: [{ opacity: 1 }, { opacity: 0 }],
     reset: true,
-    delay: 2000,
-    config: { duration: 2000 },
+    // delay: 2000,
+    config: { duration: 1500, mass: 1, tension: 500, friction: 0, clamp: true },
+    // config: { duration: 2000 },
   });
 
   useEffect(() => {
     const interval = setInterval(() => {
       setRandomNumber(Math.floor(Math.random() * d.length));
-    }, 2000);
+    }, 2600);
 
     return () => clearInterval(interval);
   }, [randomNumber]);
@@ -359,6 +360,12 @@ function AnimatedStar({ isActive }) {
         fill="none"
         viewBox="0 0 1332.45 719.35"
       >
+        <Blink isActive={isActive} />
+        <Blink isActive={isActive} />
+        <Blink isActive={isActive} />
+        <Blink isActive={isActive} />
+        <Blink isActive={isActive} />
+        <Blink isActive={isActive} />
         <Blink isActive={isActive} />
         <Blink isActive={isActive} />
         <Blink isActive={isActive} />
