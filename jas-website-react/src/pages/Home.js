@@ -40,8 +40,7 @@ function Home() {
   const refPortfolio = useRef(null);
   const [tween, setTween] = useState(null);
 
-  const isInHeroSection = useIsInViewport(refHero);
-  console.log(isInHeroSection);
+  // const isInHeroSection = useIsInViewport(refHero);
 
   const isInAboutSection = useIsInViewport(refAbout);
 
@@ -77,7 +76,7 @@ function Home() {
       <Navbar />
       <Element name="hero-section">
         <div ref={refHero} className="hero-section">
-          <HeroSection isActive={isInHeroSection} />
+          <HeroSection />
         </div>
       </Element>
 

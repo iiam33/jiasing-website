@@ -4,6 +4,7 @@ import { useSpring, animated } from "react-spring";
 
 import AnimatedLogo from "./AnimatedLogo";
 import AnimatedStar from "./AnimatedStar";
+import AnimatedScrollableIndicator from "./AnimatedScrollableIndicator";
 
 import name from "../assets/images/JiaSing_Namesvg.svg";
 
@@ -62,7 +63,7 @@ function FadeUpJobTitle({ scrollDown }) {
   );
 }
 
-function HeroSection({ isActive }) {
+function HeroSection() {
   const [scrollDown, setScrollDown] = useState(false);
 
   const translateStyles = useSpring({
@@ -100,8 +101,14 @@ function HeroSection({ isActive }) {
         className="hero-wrapper"
       > */}
       <div className="hero-wrapper">
+        <div className="left-indicator">
+          <AnimatedScrollableIndicator />
+        </div>
+        <div className="right-indicator">
+          <AnimatedScrollableIndicator />
+        </div>
         <div className="star">
-          <AnimatedStar isActive={isActive} />
+          <AnimatedStar />
         </div>
         <div className="hero-container">
           <animated.div

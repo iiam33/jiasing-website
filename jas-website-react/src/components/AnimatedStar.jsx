@@ -322,14 +322,13 @@ const d = [
   "M307.12,636.27a5.81,5.81,0,0,0-1.46-3.92,4.52,4.52,0,0,0-3.36-1.56V628.4h0c2.66,0,4.82-2.46,4.82-5.47h2.39c0,3,2.16,5.48,4.81,5.48h0v2.39h0a4.53,4.53,0,0,0-3.36,1.56,5.85,5.85,0,0,0-1.45,3.92Z",
 ];
 
-function Blink({ isActive }) {
+function Blink() {
   const [randomNumber, setRandomNumber] = useState(0);
 
   const blinkStyles = useSpring({
     from: { opacity: 0 },
     to: [{ opacity: 1 }, { opacity: 0 }],
     reset: true,
-    // delay: 2000,
     config: { duration: 1500, mass: 1, tension: 500, friction: 0, clamp: true },
     // config: { duration: 2000 },
   });
@@ -352,7 +351,7 @@ function Blink({ isActive }) {
   );
 }
 
-function AnimatedStar({ isActive }) {
+function AnimatedStar() {
   return (
     <>
       <svg
@@ -360,21 +359,21 @@ function AnimatedStar({ isActive }) {
         fill="none"
         viewBox="0 0 1332.45 719.35"
       >
-        <Blink isActive={isActive} />
-        <Blink isActive={isActive} />
-        <Blink isActive={isActive} />
-        <Blink isActive={isActive} />
-        <Blink isActive={isActive} />
-        <Blink isActive={isActive} />
-        <Blink isActive={isActive} />
-        <Blink isActive={isActive} />
-        <Blink isActive={isActive} />
-        <Blink isActive={isActive} />
-        <Blink isActive={isActive} />
-        <Blink isActive={isActive} />
-        <Blink isActive={isActive} />
-        <Blink isActive={isActive} />
-        <Blink isActive={isActive} />
+        <Blink />
+        <Blink />
+        <Blink />
+        <Blink />
+        <Blink />
+        <Blink />
+        <Blink />
+        <Blink />
+        <Blink />
+        <Blink />
+        <Blink />
+        <Blink />
+        <Blink />
+        <Blink />
+        <Blink />
       </svg>
     </>
   );

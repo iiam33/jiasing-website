@@ -10,7 +10,6 @@
     left: 0;
     height: 100vh;
     width: 100%;
-    /* position: relative; */
 }
   
 .hero-container {
@@ -43,7 +42,19 @@
 .star {
     position: absolute;
     z-index: -1;
-    /* right: 0; */
     width: 100vw;
-    /* background-color: black; */
+}
+
+.left-indicator {
+    position: absolute;
+    z-index: 2;
+    left: 5%;
+    top: 80%;
+}
+
+.right-indicator {
+    position: absolute;
+    z-index: 2;
+    right: 5%;
+    top: 80%;
 }
