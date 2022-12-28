@@ -3,6 +3,11 @@
     src: url(../../assets/fonts/MuseoSansCyrl-900.ttf);
 }
 
+@font-face {
+    font-family: BebasNeue;
+    src: url(../../assets/fonts/BebasNeue-Regular.otf);
+}
+
 .hero-wrapper {
     display: table;
 	position: static;
@@ -45,16 +50,40 @@
     width: 100vw;
 }
 
-.left-indicator {
+.left-arrow-indicator {
     position: absolute;
-    z-index: 2;
+    z-index: 3;
     left: 5%;
     top: 80%;
+    cursor: pointer;
 }
 
-.right-indicator {
+.right-arrow-indicator {
     position: absolute;
-    z-index: 2;
+    z-index: 3;
     right: 5%;
     top: 80%;
+    cursor: pointer;
+}
+
+.left-text-indicator {
+    position: absolute;
+    z-index: 2;
+    left: 6.45%;
+    top: 74.55%;
+    font-family: MuseoSansCyrl;
+    font-size: 1vw;
+    color: #8e898e;
+    letter-spacing: 0.5vw;
+}
+
+.right-text-indicator {
+    position: absolute;
+    z-index: 2;
+    right: 6.6%;
+    top: 74.55%;
+    font-family: MuseoSansCyrl;
+    font-size: 1vw;
+    color: #8e898e;
+    letter-spacing: 0.5vw;
 }

@@ -1,14 +1,6 @@
 import React from "react";
 import "./css/Navbar.css";
-import {
-  Link,
-  // Button,
-  // Element,
-  // Events,
-  // animateScroll,
-  // scrollSpy,
-  // scroller,
-} from "react-scroll";
+import { Link } from "react-scroll";
 
 function Navbar() {
   return (
@@ -21,7 +13,7 @@ function Navbar() {
             to="hero-section"
             spy={true}
             smooth={true}
-            duration={500}
+            duration={1000}
             offset={-7}
             isDynamic={true}
           >
@@ -34,7 +26,7 @@ function Navbar() {
             to="about-section"
             spy={true}
             smooth={true}
-            duration={500}
+            duration={1000}
             isDynamic={true}
           >
             About
@@ -46,7 +38,7 @@ function Navbar() {
             to="portfolio-section"
             spy={true}
             smooth={true}
-            duration={500}
+            duration={1000}
           >
             Portfolio
           </Link>

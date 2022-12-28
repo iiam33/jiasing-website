@@ -1,10 +1,20 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { useSpring, animated } from "react-spring";
+import {
+  Link,
+  Button,
+  Element,
+  Events,
+  animateScroll as scroll,
+  scrollSpy,
+  scroller,
+} from "react-scroll";
 
 import AnimatedLogo from "./AnimatedLogo";
 import AnimatedStar from "./AnimatedStar";
 import AnimatedScrollableIndicator from "./AnimatedScrollableIndicator";
+import AnimatedScrollCircle from "./AnimatedScrollCircle";
 
 import name from "../assets/images/JiaSing_Namesvg.svg";
 
@@ -63,7 +73,16 @@ function FadeUpJobTitle({ scrollDown }) {
   );
 }
 
-function HeroSection() {
+function scrollToAboutSection() {
+  scroll.scrollTo(1260, {
+    duration: 1500,
+    delay: 0,
+  });
+  // resultRef.current.scrollIntoView({ behavior: "smooth" });
+  console.log("isclicked");
+}
+
+function HeroSection({ refAbout }) {
   const [scrollDown, setScrollDown] = useState(false);
 
   const translateStyles = useSpring({
@@ -102,10 +121,20 @@ function HeroSection() {
       > */}
       <div className="hero-wrapper">
         <div className="left-indicator">
-          <AnimatedScrollableIndicator />
+          <div className="left-arrow-indicator" onClick={scrollToAboutSection}>
+            <AnimatedScrollableIndicator />
+          </div>
+          <div className="left-text-indicator">
+            <AnimatedScrollCircle />
+          </div>
         </div>
         <div className="right-indicator">
-          <AnimatedScrollableIndicator />
+          <div className="right-arrow-indicator">
+            <AnimatedScrollableIndicator />
+          </div>
+          <div className="right-text-indicator">
+            <AnimatedScrollCircle />
+          </div>
         </div>
         <div className="star">
           <AnimatedStar />

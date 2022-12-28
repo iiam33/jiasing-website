@@ -76,7 +76,7 @@ function Home() {
       <Navbar />
       <Element name="hero-section">
         <div ref={refHero} className="hero-section">
-          <HeroSection />
+          <HeroSection refAbout={refAbout}/>
         </div>
       </Element>
 
