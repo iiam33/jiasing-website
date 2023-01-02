@@ -70,6 +70,22 @@ function FadeInMoveRight({ isActive }) {
           Jia SIng, also known as Jas, is an aspiring concept artist /
           illustrator looking to bring joy and creativity to the world.
         </div>
+        <div className="about-experience">
+          <div className="experience-1">
+            <div className="experience-year">2019 - 2022</div>
+            <div className="experience-location">
+              The One Academy, Bandar Sunway
+            </div>
+            <div className="experience-desc">
+              Diploma in Illustration, Movies, and Game Art
+            </div>
+          </div>
+          <div className="experience-2">
+            <div className="experience-year">2022 - Present</div>
+            <div className="experience-location">Passion Republic</div>
+            <div className="experience-desc">Concept Artist</div>
+          </div>
+        </div>
       </animated.div>
     </>
   );

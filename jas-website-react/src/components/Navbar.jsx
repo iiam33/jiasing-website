@@ -49,7 +49,7 @@ function Navbar() {
             to="contact-section"
             spy={true}
             smooth={true}
-            duration={500}
+            duration={1000}
           >
             Contact
           </Link>

@@ -4,13 +4,18 @@
 }
 
 @font-face {
-  font-family: BebasNeue;
-  src: url(../../assets/fonts/BebasNeue-Regular.otf);
+  font-family: MuseoSans700;
+  src: url(../../assets/fonts/MuseoSans_700.otf);
 }
 
 @font-face {
-  font-family: MuseoSans;
+  font-family: MuseoSans500;
   src: url(../../assets/fonts/MuseoSans_500.otf);
+}
+
+@font-face {
+  font-family: BebasNeue;
+  src: url(../../assets/fonts/BebasNeue-Regular.otf);
 }
 
 .about-wrapper {
@@ -69,7 +74,7 @@
   font-size: 2vw;
   color: #ffffff;
   letter-spacing: 0.3vw;
-  margin-bottom: 6vh;
+  margin-bottom: 4vh;
 }
 
 .about-title {
@@ -82,9 +87,40 @@
 }
 
 .about-desc {
-  font-family: MuseoSans;
-  font-size: 0.9vw;
+  font-family: MuseoSans500;
+  font-size: 1vw;
   color: #fff;
   width: 35vw;
   line-height: 3vh;
+}
+
+.experience-1 {
+  margin-top: 4vh;
+}
+
+.experience-2 {
+  margin-top: 4vh;
+}
+
+.experience-year {
+  font-family: BebasNeue;
+  font-size: 1.2vw;
+  color: #ffffff;
+  letter-spacing: 0.25vw;
+  margin-bottom: 1vh;
+}
+
+.experience-location {
+  font-family: MuseoSansCyrl;
+  font-size: 1.5vw;
+  font-style: italic;
+  color: #fde86b;
+}
+
+.experience-desc {
+  font-family: MuseoSans500;
+  font-size: 1vw;
+  color: #fff;
+  width: 35vw;
+  margin-top: 1vh;
 }
