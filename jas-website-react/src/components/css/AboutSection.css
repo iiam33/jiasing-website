@@ -18,44 +18,50 @@
   height: 100%;
   background-size: cover;
   background-image: url(../../assets/images/portfolio/Portfolio15.jpg);
+  background-position: center;
   position: relative;
+  z-index: 0;
 }
 
 .about-left-container {
-  position: relative;
-  width: 40%;
+  width: 43%;
   height: 100%;
   float: left;
 }
 
 .about-image {
-  position: absolute;
+  height: 100%;
+  position: relative;
   margin-left: auto; 
-  margin-right: auto; 
-  left: 55%; 
-  top: 17vh;
+  margin-right: auto;
   z-index: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .about-image img {
   width: 25vw;
   border-radius: 25px;
+  vertical-align: middle;
 }
 
 .about-right-container {
   position: relative;
-  width: 60%;
+  width: 57%;
   height: 100%;
   float: right;
 }
 
 .about-content {
-  position: absolute;
+  height: 100%;
+  position: relative;
   margin-left: auto; 
-  margin-right: auto; 
-  left: 10%; 
-  top: 35vh;
+  margin-right: auto;
   z-index: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .about-name {

@@ -16,7 +16,7 @@ function AnimatedScrollableIndicator() {
   return (
     <>
       <svg
-        width="3vw"
+        width="55px"
         viewBox="0 0 59 120"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

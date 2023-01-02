@@ -48,12 +48,15 @@
 
 .active {
     color: #000000;
-    /* color: #ffffff; */
     background-color: #ffea63;
     padding: 0.2vh 1vw;
     border-radius: 16px;
     margin: 0 1vw;
     font-family: MuseoSans;
+}
+
+@media screen and (max-width: 960px) {
+
 }
 
 

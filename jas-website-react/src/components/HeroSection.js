@@ -27,6 +27,7 @@ function FadeUpName({ scrollDown }) {
       style={{
         marginLeft: "auto",
         marginRight: "auto",
+        width: "11vw",
         maxWidth: "11vw",
         ...nameStyles,
       }}
@@ -49,43 +50,37 @@ function FadeUpJobTitle({ scrollDown }) {
   return (
     <animated.div
       style={{
-        marginLeft: "auto",
-        marginRight: "auto",
         maxWidth: "60vw",
         ...titleStyles,
       }}
     >
-      {/* <img className="title" src={title} alt="Title" /> */}
-      <div className="hero-job-title">
-        <div className="job-title">
-          <p>Concept Artist / Illustration</p>
-        </div>
+      <div className="job-title">
+        <p>Concept Artist / Illustration</p>
       </div>
     </animated.div>
   );
 }
 
 function scrollToAboutSection() {
-  scroll.scrollTo(1260, {
+  scroll.scrollTo(1265, {
     duration: 1500,
     delay: 0,
   });
-  // resultRef.current.scrollIntoView({ behavior: "smooth" });
-  console.log("isclicked");
 }
 
-function HeroSection({ refAbout }) {
+function HeroSection() {
   const [scrollDown, setScrollDown] = useState(false);
 
   const translateStyles = useSpring({
-    from: { y: 160, maxWidth: "20vw" },
-    to: { y: scrollDown ? 30 : 160, maxWidth: scrollDown ? "10vw" : "20vw" },
+    from: {
+      y: 130,
+    },
+    to: {
+      y: scrollDown ? 10 : 130,
+      width: scrollDown ? "10vw" : "20vw",
+      maxWidth: scrollDown ? "10vw" : "20vw",
+    },
   });
-
-  // const shrinkStyles = useSpring({
-  //   from: { maxHeight: "100vh" },
-  //   to: { maxHeight: scrollDown ? "90vh" : "100vh" },
-  // });
 
   useEffect(() => {
     const handleScroll = (event) => {
@@ -105,49 +100,50 @@ function HeroSection({ refAbout }) {
 
   return (
     <>
-      {/* <animated.div
-        style={{
-          ...shrinkStyles,
-        }}
-        className="hero-wrapper"
-      > */}
       <div className="hero-wrapper">
         <div className="left-indicator">
-          <div className="left-arrow-indicator" onClick={scrollToAboutSection}>
-            <AnimatedScrollableIndicator />
-          </div>
-          <div className="left-text-indicator">
-            <AnimatedScrollCircle />
+          <div className="indicator-wrapper">
+            <div className="text-indicator">
+              <AnimatedScrollCircle />
+            </div>
+            <div className="arrow-indicator" onClick={scrollToAboutSection}>
+              <AnimatedScrollableIndicator />
+            </div>
           </div>
         </div>
         <div className="right-indicator">
-          <div className="right-arrow-indicator">
-            <AnimatedScrollableIndicator />
-          </div>
-          <div className="right-text-indicator">
-            <AnimatedScrollCircle />
+          <div className="indicator-wrapper">
+            <div className="arrow-indicator" onClick={scrollToAboutSection}>
+              <AnimatedScrollableIndicator />
+            </div>
+            <div className="text-indicator">
+              <AnimatedScrollCircle />
+            </div>
           </div>
         </div>
         <div className="star">
           <AnimatedStar />
         </div>
         <div className="hero-container">
-          <animated.div
-            style={{
-              marginLeft: "auto",
-              marginRight: "auto",
-              ...translateStyles,
-            }}
-          >
-            <div className="logo">
-              <AnimatedLogo />
-            </div>
-          </animated.div>
-          <FadeUpName scrollDown={scrollDown} />
-          <FadeUpJobTitle scrollDown={scrollDown} />
+          <div className="logo-container">
+            <animated.div
+              style={{
+                ...translateStyles,
+              }}
+            >
+              <div className="logo">
+                <AnimatedLogo />
+              </div>
+            </animated.div>
+          </div>
+          <div className="name-container">
+            <FadeUpName scrollDown={scrollDown} />
+          </div>
+          <div className="job-title-container">
+            <FadeUpJobTitle scrollDown={scrollDown} />
+          </div>
         </div>
       </div>
-      {/* </animated.div> */}
     </>
   );
 }

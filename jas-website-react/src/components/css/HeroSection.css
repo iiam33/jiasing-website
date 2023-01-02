@@ -9,32 +9,42 @@
 }
 
 .hero-wrapper {
-    display: table;
-	position: static;
-    top: 0;
-    left: 0;
-    height: 100vh;
+	position: relative;
     width: 100%;
+    height: 100%;
+
 }
   
 .hero-container {
-	display: table-cell;
-	vertical-align: middle;
-    /* position: relative;
-    padding: 22vh;
-    margin-bottom: auto; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.logo-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .logo {
+    width: 100%;
     height: auto;
 }
 
-.hero-job-title {
-    margin-left: auto;
-    margin-right: auto;
+.name-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.job-title {
+.job-title-container {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,40 +60,57 @@
     width: 100vw;
 }
 
-.left-arrow-indicator {
+.left-indicator {
     position: absolute;
+    z-index: 1;
+    left: 3%;
+    top: 75%;
+    width: 189.61px;
+    height: 189.61px;
+}
+
+.right-indicator {
+    position: absolute;
+    z-index: 1;
+    right: 3%;
+    top: 75%;
+    width: 189.61px;
+    height: 189.61px;
+}
+
+.indicator-wrapper {
+    height: 100%;
+    position: relative;
+    margin-left: auto; 
+    margin-right: auto;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.arrow-indicator {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
     z-index: 3;
-    left: 5%;
-    top: 80%;
     cursor: pointer;
 }
 
-.right-arrow-indicator {
-    position: absolute;
-    z-index: 3;
-    right: 5%;
-    top: 80%;
-    cursor: pointer;
-}
-
-.left-text-indicator {
-    position: absolute;
-    z-index: 2;
-    left: 6.45%;
-    top: 74.55%;
+.text-indicator {
     font-family: MuseoSansCyrl;
-    font-size: 1vw;
+    font-size: 18px;
     color: #8e898e;
-    letter-spacing: 0.5vw;
-}
-
-.right-text-indicator {
+    letter-spacing: 9px;
+    width: 100%;
+    height: 100%;
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     z-index: 2;
-    right: 6.6%;
-    top: 74.55%;
-    font-family: MuseoSansCyrl;
-    font-size: 1vw;
-    color: #8e898e;
-    letter-spacing: 0.5vw;
 }

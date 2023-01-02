@@ -27,8 +27,8 @@ function FadeInOpacity({ isActive }) {
 
 function FadeInMoveLeft({ isActive }) {
   const moveLeftStyles = useSpring({
-    from: { opacity: 0, x: 0 },
-    to: { opacity: isActive ? 1 : 0, x: isActive ? -50 : 0 },
+    from: { opacity: 0, x: 50 },
+    to: { opacity: isActive ? 1 : 0, x: isActive ? 0 : 50 },
     delay: isActive ? 300 : 200,
     config: { duration: isActive ? 900 : 600 },
   });
@@ -41,7 +41,6 @@ function FadeInMoveLeft({ isActive }) {
         }}
       >
         <img src={require(`../assets/images/JiaSing_About.jpg`)} alt="about" />
-        {/* <img src={require(`../assets/images/JiaSing_About.jpg`)} alt="about" /> */}
       </animated.div>
     </>
   );
