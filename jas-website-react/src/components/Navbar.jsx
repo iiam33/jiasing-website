@@ -45,7 +45,7 @@ function Navbar() {
 
           <Link
             className="nav-links"
-            // activeClass="active"
+            activeClass="active"
             to="contact-section"
             spy={true}
             smooth={true}

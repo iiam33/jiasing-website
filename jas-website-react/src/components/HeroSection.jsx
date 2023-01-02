@@ -1,15 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { useSpring, animated } from "react-spring";
-import {
-  Link,
-  Button,
-  Element,
-  Events,
-  animateScroll as scroll,
-  scrollSpy,
-  scroller,
-} from "react-scroll";
+import { animateScroll as scroll } from "react-scroll";
 
 import AnimatedLogo from "./AnimatedLogo";
 import AnimatedStar from "./AnimatedStar";

@@ -9,6 +9,7 @@ import Navbar from "../components/Navbar";
 import HeroSection from "../components/HeroSection";
 import PortfolioSection from "../components/PortfolioSection";
 import AboutSection from "../components/AboutSection";
+import ContactSection from "../components/ContactSection";
 
 import "../App.css";
 
@@ -38,6 +39,7 @@ function Home() {
   const refHero = useRef(null);
   const refAbout = useRef(null);
   const refPortfolio = useRef(null);
+  const refContact = useRef(null);
   const [tween, setTween] = useState(null);
 
   // const isInHeroSection = useIsInViewport(refHero);
@@ -45,6 +47,8 @@ function Home() {
   const isInAboutSection = useIsInViewport(refAbout);
 
   const isInPortfolioSection = useIsInViewport(refPortfolio);
+
+  const isInContactSection = useIsInViewport(refContact);
 
   useEffect(() => {
     if (tween) return;
@@ -76,7 +80,7 @@ function Home() {
       <Navbar />
       <Element name="hero-section">
         <div ref={refHero} className="hero-section">
-          <HeroSection refAbout={refAbout}/>
+          <HeroSection refAbout={refAbout} />
         </div>
       </Element>
 
@@ -89,6 +93,12 @@ function Home() {
       <Element name="portfolio-section">
         <div ref={refPortfolio} className="portfolio-section">
           <PortfolioSection isActive={isInPortfolioSection} />
+        </div>
+      </Element>
+
+      <Element name="contact-section">
+        <div ref={refContact} className="contact-section">
+          <ContactSection isActive={isInContactSection} />
         </div>
       </Element>
     </>
