@@ -1,0 +1,25 @@
+@font-face {
+    font-family: MuseoSansCyrl;
+    src: url(../../assets/fonts/MuseoSansCyrl-900.ttf);
+}
+
+.contact-header {
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.contact-title {
+    margin-left: auto;
+    margin-right: auto;
+    font-family: MuseoSansCyrl;
+    font-size: 5vw;
+    color: #9d999d;
+    letter-spacing: 0.25vw;
+}
+
+.contact-title p {
+    width: auto;
+}

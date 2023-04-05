@@ -1,0 +1,42 @@
+@font-face {
+    font-family: MuseoSansCyrl;
+    src: url(../../assets/fonts/MuseoSansCyrl-900.ttf);
+}
+
+.portfolio-header {
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.portfolio-title {
+    margin-left: auto;
+    margin-right: auto;
+    font-family: MuseoSansCyrl;
+    font-size: 5vw;
+    color: #9d999d;
+    letter-spacing: 0.25vw;
+}
+
+.portfolio-title p {
+    width: auto;
+}
+
+.portfolio-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolio-container {
+    column-count: 3;
+    column-gap: 5px;
+    margin: 0 auto;
+    max-width: 100%;
+    text-align: center;
+}
+
