@@ -1,0 +1,126 @@
+@font-face {
+  font-family: MuseoSansCyrl;
+  src: url(../../assets/fonts/MuseoSansCyrl-900.ttf);
+}
+
+@font-face {
+  font-family: MuseoSans700;
+  src: url(../../assets/fonts/MuseoSans_700.otf);
+}
+
+@font-face {
+  font-family: MuseoSans500;
+  src: url(../../assets/fonts/MuseoSans_500.otf);
+}
+
+@font-face {
+  font-family: BebasNeue;
+  src: url(../../assets/fonts/BebasNeue-Regular.otf);
+}
+
+.about-wrapper {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url(../../assets/images/portfolio/Portfolio15.jpg);
+  background-position: center;
+  position: relative;
+  z-index: 0;
+}
+
+.about-left-container {
+  width: 43%;
+  height: 100%;
+  float: left;
+}
+
+.about-image {
+  height: 100%;
+  position: relative;
+  margin-left: auto; 
+  margin-right: auto;
+  z-index: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.about-image img {
+  width: 25vw;
+  border-radius: 25px;
+  vertical-align: middle;
+}
+
+.about-right-container {
+  position: relative;
+  width: 57%;
+  height: 100%;
+  float: right;
+}
+
+.about-content {
+  height: 100%;
+  position: relative;
+  margin-left: auto; 
+  margin-right: auto;
+  z-index: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.about-name {
+  font-family: BebasNeue;
+  font-size: 2vw;
+  color: #ffffff;
+  letter-spacing: 0.3vw;
+  margin-bottom: 4vh;
+}
+
+.about-title {
+  font-family: MuseoSansCyrl;
+  font-size: 3vw;
+  font-style: italic;
+  color: #fde86b;
+  letter-spacing: 0.1vw;
+  margin-bottom: 2vh;
+}
+
+.about-desc {
+  font-family: MuseoSans500;
+  font-size: 1vw;
+  color: #fff;
+  width: 35vw;
+  line-height: 3vh;
+}
+
+.experience-1 {
+  margin-top: 4vh;
+}
+
+.experience-2 {
+  margin-top: 4vh;
+}
+
+.experience-year {
+  font-family: BebasNeue;
+  font-size: 1.2vw;
+  color: #ffffff;
+  letter-spacing: 0.25vw;
+  margin-bottom: 1vh;
+}
+
+.experience-location {
+  font-family: MuseoSansCyrl;
+  font-size: 1.5vw;
+  font-style: italic;
+  color: #fde86b;
+}
+
+.experience-desc {
+  font-family: MuseoSans500;
+  font-size: 1vw;
+  color: #fff;
+  width: 35vw;
+  margin-top: 1vh;
+}
