@@ -25,4 +25,4 @@ jobs:
       - name: Build docker images
         run: docker build -t jas-website:latest .
       - name: Run docker images
-        run: docker run jas-website:latest
+        run: docker run -d -p 3000:80 jas-website:latest
