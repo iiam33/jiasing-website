@@ -1,5 +1,5 @@
 # JiasingWebsite
-This is a personal portfolio website I have developed for Jiasing, a graphic designer and illustrator. 
+This is a personal portfolio website I have developed for Jiasing, a graphic designer and an illustrator at the same time. 
 
 ### Installation
 1. Clone the respository by using the command ```git clone https://github.com/iiam33/jiasing-website.git```
