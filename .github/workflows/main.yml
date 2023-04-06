@@ -24,3 +24,5 @@ jobs:
         uses: actions/checkout@v3
       - name: Build docker images
         run: docker build -t jas-website:latest .
+      - name: Run docker images
+        run: docker run jas-website:latest
