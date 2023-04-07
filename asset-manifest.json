@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/jiasing-website/static/css/main.853cbf4c.css",
-    "main.js": "/jiasing-website/static/js/main.61bdb419.js",
+    "main.js": "/jiasing-website/static/js/main.e768af91.js",
     "static/media/05.jpg": "/jiasing-website/static/media/05.f9673090b07cb28c7422.jpg",
     "static/media/08.jpg": "/jiasing-website/static/media/08.f54a114ce320b2762e17.jpg",
     "static/media/16.jpg": "/jiasing-website/static/media/16.1a4d4acce408d64b544c.jpg",
@@ -39,10 +39,10 @@
     "static/media/JiaSing_Namesvg.svg": "/jiasing-website/static/media/JiaSing_Namesvg.4ed11ed101e0b719c1668af5f6740f95.svg",
     "index.html": "/jiasing-website/index.html",
     "main.853cbf4c.css.map": "/jiasing-website/static/css/main.853cbf4c.css.map",
-    "main.61bdb419.js.map": "/jiasing-website/static/js/main.61bdb419.js.map"
+    "main.e768af91.js.map": "/jiasing-website/static/js/main.e768af91.js.map"
   },
   "entrypoints": [
     "static/css/main.853cbf4c.css",
-    "static/js/main.61bdb419.js"
+    "static/js/main.e768af91.js"
   ]
 }
