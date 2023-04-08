@@ -34,30 +34,30 @@ function FadeUpTitle({ isActive }) {
   );
 }
 
-function FadeUp({ isActive, index, imageUrl, imageName }) {
-  const titleStyles = useSpring({
-    from: { opacity: 0, y: 0 },
-    to: {
-      opacity: isActive ? 1 : 0,
-      y: isActive ? 0 : 50,
-    },
-    delay: isActive ? 800 : 0,
-    config: { duration: isActive ? 700 : 0 },
-  });
+// function FadeUp({ isActive, index, imageUrl, imageName }) {
+//   const titleStyles = useSpring({
+//     from: { opacity: 0, y: 0 },
+//     to: {
+//       opacity: isActive ? 1 : 0,
+//       y: isActive ? 0 : 50,
+//     },
+//     delay: isActive ? 800 : 0,
+//     config: { duration: isActive ? 700 : 0 },
+//   });
 
-  return (
-    <animated.div
-      style={{
-        marginLeft: "auto",
-        marginRight: "auto",
-        maxWidth: "50vw",
-        ...titleStyles,
-      }}
-    >
-      <Pin key={index} urls={imageUrl} name={imageName} />
-    </animated.div>
-  );
-}
+//   return (
+//     <animated.div
+//       style={{
+//         marginLeft: "auto",
+//         marginRight: "auto",
+//         maxWidth: "50vw",
+//         ...titleStyles,
+//       }}
+//     >
+//       <Pin key={index} urls={imageUrl} name={imageName} />
+//     </animated.div>
+//   );
+// }
 
 function PortfolioSection({ isActive }) {
   const pins = require
