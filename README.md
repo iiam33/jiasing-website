@@ -1,5 +1,5 @@
 # JiasingWebsite
-This is a personal portfolio website I have developed for Jiasing, a graphic designer and an illustrator at the same time. The website can be found in https://iiam33.github.io/jiasing-website/
+This is a personal portfolio website I have developed using React.js for Jiasing, a graphic designer and an illustrator at the same time. The website can be found in https://iiam33.github.io/jiasing-website/
 
 ### Installation
 1. Clone the respository by using the command ```git clone https://github.com/iiam33/jiasing-website.git```
